@@ -4,6 +4,7 @@ import * as cdk from '@aws-cdk/core';
 import { CdkStaticWebsiteStack } from '../lib/cdk-static-website-stack';
 
 const app = new cdk.App();
+
 new CdkStaticWebsiteStack(app, 'CdkStaticWebsiteStack', {
   env: { 
     account: process.env.CDK_DEFAULT_ACCOUNT, 

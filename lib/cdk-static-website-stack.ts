@@ -9,7 +9,7 @@ export class CdkStaticWebsiteStack extends cdk.Stack {
     const pipeline = new CodePipeline(this, 'Pipeline', {
       pipelineName: 'StaticWebsitePipeline',
       synth: new ShellStep('Synth', {
-        input: CodePipelineSource.gitHub('balajiram/cdk-static-website', 'main'),
+        input: CodePipelineSource.gitHub('balajiram/cdk-static-website', 'master'),
         commands: ['npm ci', 'npm run build', 'npx cdk synth']
       })
     });
